@@ -1,5 +1,6 @@
-import { Box, Flex, Img, Text, VStack } from "@chakra-ui/react"
+import { Box, Button, Flex, Icon, Img, Link, Text, VStack } from "@chakra-ui/react"
 import Contabilidad from "../../../assets/contabilidad.jpg"
+import { FaWhatsapp } from "react-icons/fa"
 
 export const Intro = () => {
     return (
@@ -19,8 +20,22 @@ export const Intro = () => {
             <Text color="whiteAlpha.900" fontSize={{ base: "lg", sm: "xl", md: "2xl" }} fontWeight="medium" textAlign="center">
               Andres Vergara Vergara, <Text as="span" fontWeight="bold">andre4254@hotmail.com</Text>
             </Text>
-      
-            <Box pt="6">
+            <Box mt={{ base: 4, md: 0 }}>
+        <Link href="https://wa.me/56995155172" isExternal>
+          <Button
+            size="lg"
+            bg="green.500"
+            color="white"
+            _hover={{ bg: "green.600" }}
+            leftIcon={<Icon as={FaWhatsapp} boxSize={5} />}
+            shadow="lg"
+            px={5}
+          >
+            Contáctanos en WhatsApp
+          </Button>
+        </Link>
+      </Box>
+            <Box>
               <Text color="whiteAlpha.900" fontSize={{ base: "xl", sm: "2xl", md: "3xl" }} fontWeight="bold" textAlign="center">
                 Asesorías Contable y Tributaria para Empresas
               </Text>
